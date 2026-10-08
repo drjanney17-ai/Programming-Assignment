@@ -6,7 +6,8 @@ CSDP 232 · Internet Programming · Fall 2026
 
 - Site styled: the supplied Hawk Study Spots site
 - Pages: `index.html`, `spots.html`, `tips.html`
-- How to view: open index.html in a browser to view the site.
+- How to view: open `index.html` in a browser to view the website.
+- Stylesheet: all three pages use the shared `css/style.css` file.
 
 ## Design
 I used a simple green, white, and orange color scheme. I kept the layout simple so the pages are easy to read and navigate. The same stylesheet is used on all three pages so the site has a consistent look.
