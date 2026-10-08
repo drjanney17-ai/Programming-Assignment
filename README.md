@@ -47,5 +47,8 @@ The CSS was checked with the W3C CSS Validator and had 0 errors.
 ![W3C CSS Validator result](screenshots/css-validation.png)
 All three HTML pages were also checked with the W3C Markup Validation Service. They had no errors or warnings.
 
+## Final check
+The site was checked in the browser after styling. All three pages use the same stylesheet and the required screenshots are included in the repository.
+
 ## AI use statement
 I used ChatGPT to help me understand the assignment, explain CSS concepts, check my work, and organize parts of this README. I used AI as a guide rather than having it write the code.
