@@ -6,8 +6,8 @@ CSDP 232 · Internet Programming · Fall 2026
 
 - Site styled: the supplied Hawk Study Spots site
 - Pages: `index.html`, `spots.html`, `tips.html`
-- How to view: open `index.html` in a browser.
-
+- How to view: open index.html in a browser to view the site.
+  
 ## Color and contrast check
 
 | Text | Text color | Background color | Contrast ratio (from DevTools) |
