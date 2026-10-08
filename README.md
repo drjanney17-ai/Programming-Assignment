@@ -10,6 +10,9 @@ CSDP 232 · Internet Programming · Fall 2026
 
 ## Design
 I used a simple green, white, and orange color scheme. I kept the layout simple so the pages are easy to read and navigate. The same stylesheet is used on all three pages so the site has a consistent look.
+
+## Accessibility
+The text and links have enough color contrast for normal text. I also added visible focus styles for links so they are easier to see when using the keyboard.
   
 ## Color and contrast check
 
