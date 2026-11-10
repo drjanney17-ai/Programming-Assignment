@@ -34,17 +34,15 @@ Self-check: 37 of 37 checks passed
 
 ## Bug log (Part C)
 
-| Bug | Function | What I saw | Cause | Fix |
+## Bug Log (Part C)
+
+| Bug | Function | What I Saw | Cause | Fix |
 |---|---|---|---|---|
-| C1 | welcomeMessage | Uncaught ReferenceError: Name is not defined | The parameter is `name`, but the return line used `Name`. JavaScript treats those as different names, so `Name` does not exist. | Changed `return greeting + Name + "!";` to `return greeting + name + "!";` |
-
-| C2 | isOnSale | isOnSale(listing 101) returned true, and the listing's condition changed to "fair". Expected false, and the condition should stay "good". | `listing.condition = "fair"` assigns "fair" instead of comparing. An assignment used as a condition is treated as true, so the function always returned true and changed the listing. | Changed `if (listing.condition = "fair")` to `if (listing.condition === "fair")` |
-
-| C3 | cartSubtotal | Uncaught TypeError: Cannot read properties of undefined (reading 'price') | The loop used `i <= cart.length`, so the last pass read one index past the end of the array. `cart[i]` was undefined there. | Changed `for (let i = 0; i <= cart.length; i++)` to `for (let i = 0; i < cart.length; i++)` |
-
-| C4 | addTax | addTax(100) returned undefined. Expected 106. | The function calculated `rounded` but never returned it, so the result was undefined. | Added `return rounded;` after the rounding line |
-
-| C5 | addShipping | addShipping("30") returned "305". Expected 35. | `subtotalText` is a string. Using `+` joined the text "30" with 5 instead of adding the numbers. | Changed `return subtotalText + shipping;` to `return Number(subtotalText) + shipping;` |
+| C1 | welcomeMessage | ReferenceError: Name is not defined | Used `Name` instead of the parameter `name`. | Replaced `Name` with `name`. |
+| C2 | isOnSale | Returned true incorrectly and changed the listing. | Used `=` instead of `===` for comparison. | Changed `=` to `===`. |
+| C3 | cartSubtotal | TypeError when reading price. | Used `<=` instead of `<` in the loop condition. | Changed `<=` to `<`. |
+| C4 | addTax | Returned undefined instead of the total. | Calculated the result without returning it. | Added `return rounded`. |
+| C5 | addShipping | Returned "305" instead of 35. | Added a string instead of a number. | Converted the subtotal using `Number()`. |
 
 ## Reflection
 
