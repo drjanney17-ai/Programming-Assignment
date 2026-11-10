@@ -18,6 +18,16 @@ calculates prices, checks buyer affordability, and summarizes seller listings.
 - `js/checks.js` — Automated self-checks.
 - `js/data.js` — Sample book listing data.
 
+## Testing Instructions
+
+1. Open `pa2/index.html` in a web browser.
+2. Open the browser Developer Tools using F12.
+3. Select the Console tab.
+4. Refresh the page.
+5. Review the self-check results.
+
+The project should pass all 37 automated checks across Parts A, B, and C.
+
 ## Self-check result
 
 Self-check: 37 of 37 checks passed
