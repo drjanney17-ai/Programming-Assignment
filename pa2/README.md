@@ -1,37 +1,31 @@
 # PA2 — Book Swap Logic
 
-**Name:** <!-- your full name -->
-**GitHub username:** <!-- your GitHub username -->
+**Name:** David Janney
+**GitHub username:** drjanney17-ai
 **GitHub Pages link for pa2/:** <!-- https://<username>.github.io/csdp232-pa1-<username>/pa2/ -->
 
 ## Self-check result
 
-<!-- Open pa2/index.html, then copy the line under the summary here, for example:
-     Self-check: 37 of 37 checks passed -->
-
-Self-check: __ of __ checks passed
+Self-check: 37 of 37 checks passed
 
 ## Bug log (Part C)
 
-<!-- One row per function in js/buggy.js. Be specific:
-     What I saw = the EXACT error message, or the wrong result next to the expected one
-     Cause      = WHY it happened
-     Fix        = the exact change you made (old code -> new code) -->
-
 | Bug | Function | What I saw | Cause | Fix |
 |---|---|---|---|---|
-| C1 | welcomeMessage |  |  |  |
-| C2 | isOnSale |  |  |  |
-| C3 | cartSubtotal |  |  |  |
-| C4 | addTax |  |  |  |
-| C5 | addShipping |  |  |  |
+| C1 | welcomeMessage | Uncaught ReferenceError: Name is not defined | The parameter is `name`, but the return line used `Name`. JavaScript treats those as different names, so `Name` does not exist. | Changed `return greeting + Name + "!";` to `return greeting + name + "!";` |
+
+| C2 | isOnSale | isOnSale(listing 101) returned true, and the listing's condition changed to "fair". Expected false, and the condition should stay "good". | `listing.condition = "fair"` assigns "fair" instead of comparing. An assignment used as a condition is treated as true, so the function always returned true and changed the listing. | Changed `if (listing.condition = "fair")` to `if (listing.condition === "fair")` |
+
+| C3 | cartSubtotal | Uncaught TypeError: Cannot read properties of undefined (reading 'price') | The loop used `i <= cart.length`, so the last pass read one index past the end of the array. `cart[i]` was undefined there. | Changed `for (let i = 0; i <= cart.length; i++)` to `for (let i = 0; i < cart.length; i++)` |
+
+| C4 | addTax | addTax(100) returned undefined. Expected 106. | The function calculated `rounded` but never returned it, so the result was undefined. | Added `return rounded;` after the rounding line |
+
+| C5 | addShipping | addShipping("30") returned "305". Expected 35. | `subtotalText` is a string. Using `+` joined the text "30" with 5 instead of adding the numbers. | Changed `return subtotalText + shipping;` to `return Number(subtotalText) + shipping;` |
 
 ## Reflection
 
-<!-- 3 to 5 sentences in your own words. For example: which function was hardest and why,
-     which bug took longest to find, and what you will do differently next time. -->
+This project was helpful to adjust to Javascript while being used to Java syntax. The `affordableTitles` function was the most difficult for me because it required combining several methods, variables, and function calls. It just made the overall process a little more challenging to understand and implement. I thought the bugs were all pretty simple to catch. 
 
 ## AI use statement
 
-<!-- Name every AI tool you used, what you used it for (Green or Yellow tier only), and what
-     you changed because of it. If you used none, write: "I did not use any AI tools for PA2." -->
+I used ChatGPT for organizing the assignment, Git instructions, and explaining some JavaScript concepts. I used it for guidance on managing my repository, commits, and project structure. 
