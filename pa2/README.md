@@ -4,6 +4,20 @@
 **GitHub username:** drjanney17-ai
 **GitHub Pages link for pa2/:** <!-- https://<username>.github.io/csdp232-pa1-<username>/pa2/ -->
 
+## Project Overview
+
+Shore Book Swap is a JavaScript project that manages textbook listings,
+calculates prices, checks buyer affordability, and summarizes seller listings.
+
+### Folder Structure
+
+- `index.html` — Main project page and self-check interface.
+- `css/checks.css` — Styling for the self-check page.
+- `js/bookswap.js` — Part A and Part B functions.
+- `js/buggy.js` — Part C debugging functions.
+- `js/checks.js` — Automated self-checks.
+- `js/data.js` — Sample book listing data.
+
 ## Self-check result
 
 Self-check: 37 of 37 checks passed
